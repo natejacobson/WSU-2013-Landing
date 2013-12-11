@@ -1,5 +1,5 @@
 /*
- Theme Name:     WSU News Theme
+ Theme Name:     WSU Landing
  Theme URI:      http://news.wsu.edu
  Description:    Child theme of TwentyThirteen for WSU News.
  Template:       twentythirteen
@@ -257,3 +257,9 @@ button, input, textarea{
 	width: 80px;
 	margin-top: 15px;
 }
+
+/* Hiding */
+#globalnav a,
+#globalnav input {
+	display: none;
+	}

@@ -13,28 +13,16 @@
 
 </div><!-- #main -->
 <div id="secondary">
-	<?php
-	// Show a search form on every page.
-	get_search_form();
-
-	// @global WSU_News_Announcements $wsu_news_announcements
-	global $wsu_content_type_announcement;
-	// Load a sidebar when we're dealing with the display of announcements.
-	if ( isset( $wsu_content_type_announcement->post_type ) && ( is_singular( $wsu_content_type_announcement->post_type ) || is_post_type_archive( $wsu_content_type_announcement->post_type ) ) )
-		get_sidebar();
-	?>
-	<?php if ( is_singular( 'post' ) ) : ?>
-		<!-- AddThis Button BEGIN -->
-		<div class="addthis_toolbox addthis_floating_style addthis_counter_style">
-			<a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
-			<a class="addthis_button_tweet" tw:count="vertical"></a>
-			<a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
-			<a class="addthis_counter"></a>
-		</div>
-		<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51c227791d6b6af5"></script>
-		<!-- AddThis Button END -->
-	<?php endif; ?>
+	
+<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+		<div class="sidebar-inner">
+			<div class="widget-area">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+			</div><!-- .widget-area -->
+		</div><!-- .sidebar-inner -->
+<?php endif; ?>
+	
+	
 </div>
 <div class="clear"></div>
 
