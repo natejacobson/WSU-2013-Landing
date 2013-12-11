@@ -257,9 +257,3 @@ button, input, textarea{
 	width: 80px;
 	margin-top: 15px;
 }
-
-/* Hiding */
-#globalnav a,
-#globalnav input {
-	display: none;
-	}
